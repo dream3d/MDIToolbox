@@ -1,0 +1,7 @@
+ <!DOCTYPE RCC>
+ <RCC version="1.0">
+ <qresource>
+ <file>MDIToolbox/MDIToolboxLicense.txt</file>
+ <file>MDIToolbox/MDIToolboxDescription.txt</file>
+ </qresource>
+ </RCC>
