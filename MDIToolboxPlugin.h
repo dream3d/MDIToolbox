@@ -15,131 +15,130 @@
  */
 class MDIToolboxPlugin : public QObject, public ISIMPLibPlugin
 {
-    Q_OBJECT
-    Q_INTERFACES(ISIMPLibPlugin)
-    Q_PLUGIN_METADATA(IID "com.your.domain.MDIToolboxPlugin")
+  Q_OBJECT
+  Q_INTERFACES(ISIMPLibPlugin)
+  Q_PLUGIN_METADATA(IID "com.your.domain.MDIToolboxPlugin")
 
-  public:
-    MDIToolboxPlugin();
-    virtual ~MDIToolboxPlugin();
-    
-    /**
-     * @brief getPluginName Returns the name of the plugin
-     */
-    virtual QString getPluginName();
+public:
+  MDIToolboxPlugin();
+  virtual ~MDIToolboxPlugin();
 
-    /**
-     * @brief getVersion Returns the version
-     */
-    virtual QString getVersion();
+  /**
+   * @brief getPluginName Returns the name of the plugin
+   */
+  virtual QString getPluginName();
 
-     /**
-     * @brief getCompatibilityVersion Returns the compatibility version
-     */
-    virtual QString getCompatibilityVersion();
+  /**
+   * @brief getVersion Returns the version
+   */
+  virtual QString getVersion();
 
-     /**
-     * @brief getVendor Returns the name of the vendor
-     */
-    virtual QString getVendor();
+  /**
+  * @brief getCompatibilityVersion Returns the compatibility version
+  */
+  virtual QString getCompatibilityVersion();
 
-    /**
-     * @brief getURL Returns the URL of the plugin
-     */
-    virtual QString getURL();
+  /**
+  * @brief getVendor Returns the name of the vendor
+  */
+  virtual QString getVendor();
 
-    /**
-     * @brief getLocationReturns the location of the plugin
-     */
-    virtual QString getLocation();
+  /**
+   * @brief getURL Returns the URL of the plugin
+   */
+  virtual QString getURL();
 
-    /**
-     * @brief getDescription Returns the description of the plugin
-     * PLEASE UPDATE YOUR PLUGIN'S DESCRIPTION FILE.
-     * It is located at MDIToolbox/Resources/MDIToolbox/MDIToolboxDescription.txt
-     */
-    virtual QString getDescription();
+  /**
+   * @brief getLocationReturns the location of the plugin
+   */
+  virtual QString getLocation();
 
-    /**
-     * @brief getCopyright Returns the copyright of the plugin
-     */
-    virtual QString getCopyright();
+  /**
+   * @brief getDescription Returns the description of the plugin
+   * PLEASE UPDATE YOUR PLUGIN'S DESCRIPTION FILE.
+   * It is located at MDIToolbox/Resources/MDIToolbox/MDIToolboxDescription.txt
+   */
+  virtual QString getDescription();
 
-    /**
-     * @brief getLicense Returns the license of the plugin
-     * PLEASE UPDATE YOUR PLUGIN'S LICENSE FILE.
-     * It is located at MDIToolbox/Resources/MDIToolbox/MDIToolboxLicense.txt
-     */
-    virtual QString getLicense();
+  /**
+   * @brief getCopyright Returns the copyright of the plugin
+   */
+  virtual QString getCopyright();
 
-    /**
-     * @brief getFilters Returns the filters of the plugin
-     */
-    virtual QList<QString> getFilters();
+  /**
+   * @brief getLicense Returns the license of the plugin
+   * PLEASE UPDATE YOUR PLUGIN'S LICENSE FILE.
+   * It is located at MDIToolbox/Resources/MDIToolbox/MDIToolboxLicense.txt
+   */
+  virtual QString getLicense();
 
-    /**
-     * @brief getThirdPartyLicenses Returns the third party licenses of the plugin
-     */
-    virtual QMap<QString, QString> getThirdPartyLicenses();
+  /**
+   * @brief getFilters Returns the filters of the plugin
+   */
+  virtual QList<QString> getFilters();
 
-    /**
-     * @brief getDidLoad Returns the load status of the plugin
-     */
-    virtual bool getDidLoad();
+  /**
+   * @brief getThirdPartyLicenses Returns the third party licenses of the plugin
+   */
+  virtual QMap<QString, QString> getThirdPartyLicenses();
 
-    /**
-     * @brief setDidLoad Sets the load status of the plugin
-     * @param didLoad Boolean value to set status
-     */
-    virtual void setDidLoad(bool didLoad);
+  /**
+   * @brief getDidLoad Returns the load status of the plugin
+   */
+  virtual bool getDidLoad();
 
-    /**
-     * @brief setLocation Sets the location of the plugin on the file system.
-     * This is required so that we can cache the file path information
-     * as the plugin is loaded.
-     * @param filePath File path
-     */
-    virtual void setLocation(QString filePath);
+  /**
+   * @brief setDidLoad Sets the load status of the plugin
+   * @param didLoad Boolean value to set status
+   */
+  virtual void setDidLoad(bool didLoad);
 
-    /**
-     * @brief registerFilterWidgets Register all the filters with the FilterWidgetFactory
-     * @param fwm FilterWidgetManager instance pointer
-     */
-    virtual void registerFilterWidgets(FilterWidgetManager* fwm);
+  /**
+   * @brief setLocation Sets the location of the plugin on the file system.
+   * This is required so that we can cache the file path information
+   * as the plugin is loaded.
+   * @param filePath File path
+   */
+  virtual void setLocation(QString filePath);
 
-    /**
-    * @brief registerFilters Registers the filters that this plugin implements with the Filter Manager that is passed in
-    * @param fm FilterManager instance pointer
-    */
-    virtual void registerFilters(FilterManager* fm);
+  /**
+   * @brief registerFilterWidgets Register all the filters with the FilterWidgetFactory
+   * @param fwm FilterWidgetManager instance pointer
+   */
+  virtual void registerFilterWidgets(FilterWidgetManager* fwm);
 
+  /**
+  * @brief registerFilters Registers the filters that this plugin implements with the Filter Manager that is passed in
+  * @param fm FilterManager instance pointer
+  */
+  virtual void registerFilters(FilterManager* fm);
 
-    /**
-     * @brief writeSettings Writes the settings in the input gui to the Application's preference file
-     * @param prefs QSettings reference variable
-     */
-    virtual void writeSettings(QSettings& prefs);
+  /**
+   * @brief writeSettings Writes the settings in the input gui to the Application's preference file
+   * @param prefs QSettings reference variable
+   */
+  virtual void writeSettings(QSettings& prefs);
 
-    /**
-     * @brief readSettings Reads the settings from the Application's preference file and sets
-     * the input GUI widgets accordingly.
-     * @param prefs QSettings reference variable
-     */
-    virtual void readSettings(QSettings& prefs);
+  /**
+   * @brief readSettings Reads the settings from the Application's preference file and sets
+   * the input GUI widgets accordingly.
+   * @param prefs QSettings reference variable
+   */
+  virtual void readSettings(QSettings& prefs);
 
-  private:
-    QString             m_Version;
-    QString             m_CompatibilityVersion;
-    QString             m_Vendor;
-    QString             m_URL;
-    QString             m_Location;
-    QString             m_Description;
-    QString             m_Copyright;
-    QList<QString>      m_Filters;
-    bool                m_DidLoad;
+private:
+  QString m_Version;
+  QString m_CompatibilityVersion;
+  QString m_Vendor;
+  QString m_URL;
+  QString m_Location;
+  QString m_Description;
+  QString m_Copyright;
+  QList<QString> m_Filters;
+  bool m_DidLoad;
 
-    MDIToolboxPlugin(const MDIToolboxPlugin&); // Copy Constructor Not Implemented
-    void operator=(const MDIToolboxPlugin&); // Operator '=' Not Implemented
+  MDIToolboxPlugin(const MDIToolboxPlugin&); // Copy Constructor Not Implemented
+  void operator=(const MDIToolboxPlugin&);   // Operator '=' Not Implemented
 };
 
 #endif /* _MDIToolbox_H_ */

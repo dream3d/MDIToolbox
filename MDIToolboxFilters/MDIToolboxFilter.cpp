@@ -6,8 +6,6 @@
 
 #include "SIMPLib/Common/Constants.h"
 
-
-
 #include "MDIToolbox/MDIToolboxConstants.h"
 #include "MDIToolbox/MDIToolboxVersion.h"
 
@@ -17,8 +15,8 @@
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-MDIToolboxFilter::MDIToolboxFilter() :
-  AbstractFilter()
+MDIToolboxFilter::MDIToolboxFilter()
+: AbstractFilter()
 {
   initialize();
   setupFilterParameters();
@@ -58,7 +56,6 @@ void MDIToolboxFilter::dataCheck()
 {
   setErrorCondition(0);
   setWarningCondition(0);
-  
 }
 
 // -----------------------------------------------------------------------------
@@ -67,12 +64,12 @@ void MDIToolboxFilter::dataCheck()
 void MDIToolboxFilter::preflight()
 {
   // These are the REQUIRED lines of CODE to make sure the filter behaves correctly
-  setInPreflight(true); // Set the fact that we are preflighting.
-  emit preflightAboutToExecute(); // Emit this signal so that other widgets can do one file update
+  setInPreflight(true);              // Set the fact that we are preflighting.
+  emit preflightAboutToExecute();    // Emit this signal so that other widgets can do one file update
   emit updateFilterParameters(this); // Emit this signal to have the widgets push their values down to the filter
-  dataCheck(); // Run our DataCheck to make sure everthing is setup correctly
-  emit preflightExecuted(); // We are done preflighting this filter
-  setInPreflight(false); // Inform the system this filter is NOT in preflight mode anymore.
+  dataCheck();                       // Run our DataCheck to make sure everthing is setup correctly
+  emit preflightExecuted();          // We are done preflighting this filter
+  setInPreflight(false);             // Inform the system this filter is NOT in preflight mode anymore.
 }
 
 // -----------------------------------------------------------------------------
@@ -82,18 +79,24 @@ void MDIToolboxFilter::execute()
 {
   initialize();
   dataCheck();
-  if(getErrorCondition() < 0) { return; }
+  if(getErrorCondition() < 0)
+  {
+    return;
+  }
 
-  if (getCancel() == true) { return; }
+  if(getCancel() == true)
+  {
+    return;
+  }
 
-  if (getWarningCondition() < 0)
+  if(getWarningCondition() < 0)
   {
     QString ss = QObject::tr("Some warning message");
     setWarningCondition(-88888888);
     notifyWarningMessage(getHumanLabel(), ss, getWarningCondition());
   }
 
-  if (getErrorCondition() < 0)
+  if(getErrorCondition() < 0)
   {
     QString ss = QObject::tr("Some error message");
     setErrorCondition(-99999999);
@@ -121,7 +124,9 @@ AbstractFilter::Pointer MDIToolboxFilter::newFilterInstance(bool copyFilterParam
 //
 // -----------------------------------------------------------------------------
 const QString MDIToolboxFilter::getCompiledLibraryName()
-{ return MDIToolboxConstants::MDIToolboxBaseName; }
+{
+  return MDIToolboxConstants::MDIToolboxBaseName;
+}
 
 // -----------------------------------------------------------------------------
 //
@@ -138,7 +143,7 @@ const QString MDIToolboxFilter::getFilterVersion()
 {
   QString version;
   QTextStream vStream(&version);
-  vStream <<  MDIToolbox::Version::Major() << "." << MDIToolbox::Version::Minor() << "." << MDIToolbox::Version::Patch();
+  vStream << MDIToolbox::Version::Major() << "." << MDIToolbox::Version::Minor() << "." << MDIToolbox::Version::Patch();
   return version;
 }
 
@@ -146,17 +151,22 @@ const QString MDIToolboxFilter::getFilterVersion()
 //
 // -----------------------------------------------------------------------------
 const QString MDIToolboxFilter::getGroupName()
-{ return SIMPL::FilterGroups::Unsupported; }
+{
+  return SIMPL::FilterGroups::Unsupported;
+}
 
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
 const QString MDIToolboxFilter::getSubGroupName()
-{ return "MDIToolbox"; }
+{
+  return "MDIToolbox";
+}
 
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
 const QString MDIToolboxFilter::getHumanLabel()
-{ return "MDIToolboxFilter"; }
-
+{
+  return "MDIToolboxFilter";
+}

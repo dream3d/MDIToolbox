@@ -7,9 +7,9 @@
 #include <QtCore/QFile>
 #include <QtCore/QFileInfo>
 
+#include "SIMPLib/Common/FilterFactory.hpp"
 #include "SIMPLib/Common/FilterManager.h"
 #include "SIMPLib/Common/IFilterFactory.hpp"
-#include "SIMPLib/Common/FilterFactory.hpp"
 
 #include "MDIToolbox/MDIToolboxConstants.h"
 
@@ -19,18 +19,25 @@
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-MDIToolboxPlugin::MDIToolboxPlugin() :
-m_Version("0.1.0"),                            // Initialize MDIToolbox's Version Number Here
-m_CompatibilityVersion("0.1.0"), // Initialize MDIToolbox's Compatibility Version Number Here
-m_Vendor("Vendor Name"),                                // Initialize MDIToolbox's Vendor Name Here
-m_URL("URL"),                                           // Initialize Company URL Here
-m_Location("Location"),                                 // Initialize MDIToolbox library Location Here
-m_Description("Description"),                           // Initialize MDIToolbox's Description Here
-m_Copyright("Copyright"),                               // Initialize MDIToolbox's Copyright Here
-m_Filters(QList<QString>()),                        // Initialize MDIToolbox's List of Dependencies Here
-m_DidLoad(false)
+MDIToolboxPlugin::MDIToolboxPlugin()
+: m_Version("0.1.0")
+, // Initialize MDIToolbox's Version Number Here
+    m_CompatibilityVersion("0.1.0")
+, // Initialize MDIToolbox's Compatibility Version Number Here
+    m_Vendor("Vendor Name")
+, // Initialize MDIToolbox's Vendor Name Here
+    m_URL("URL")
+, // Initialize Company URL Here
+    m_Location("Location")
+, // Initialize MDIToolbox library Location Here
+    m_Description("Description")
+, // Initialize MDIToolbox's Description Here
+    m_Copyright("Copyright")
+, // Initialize MDIToolbox's Copyright Here
+    m_Filters(QList<QString>())
+, // Initialize MDIToolbox's List of Dependencies Here
+    m_DidLoad(false)
 {
-
 }
 
 // -----------------------------------------------------------------------------
@@ -100,9 +107,9 @@ QString MDIToolboxPlugin::getDescription()
   QFileInfo licenseFileInfo(licenseFile);
   QString text = "<<--Description was not read-->>";
 
-  if ( licenseFileInfo.exists() )
+  if(licenseFileInfo.exists())
   {
-    if ( licenseFile.open(QIODevice::ReadOnly | QIODevice::Text) )
+    if(licenseFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
       QTextStream in(&licenseFile);
       text = in.readAll();
@@ -131,9 +138,9 @@ QString MDIToolboxPlugin::getLicense()
   QFileInfo licenseFileInfo(licenseFile);
   QString text = "<<--License was not read-->>";
 
-  if ( licenseFileInfo.exists() )
+  if(licenseFileInfo.exists())
   {
-    if ( licenseFile.open(QIODevice::ReadOnly | QIODevice::Text) )
+    if(licenseFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
       QTextStream in(&licenseFile);
       text = in.readAll();
@@ -154,14 +161,14 @@ QMap<QString, QString> MDIToolboxPlugin::getThirdPartyLicenses()
   fileStrList.push_back(":/ThirdParty/Qt.txt");
   fileStrList.push_back(":/ThirdParty/Qwt.txt");
 
-  for (QList<QString>::iterator iter = fileStrList.begin(); iter != fileStrList.end(); iter++)
+  for(QList<QString>::iterator iter = fileStrList.begin(); iter != fileStrList.end(); iter++)
   {
     QFile file(*iter);
     QFileInfo licenseFileInfo(file);
 
-    if ( licenseFileInfo.exists() )
+    if(licenseFileInfo.exists())
     {
-      if ( file.open(QIODevice::ReadOnly | QIODevice::Text) )
+      if(file.open(QIODevice::ReadOnly | QIODevice::Text))
       {
         QTextStream in(&file);
         licenseMap.insert(licenseFileInfo.baseName(), in.readAll());
@@ -213,4 +220,3 @@ void MDIToolboxPlugin::readSettings(QSettings& prefs)
 #include "MDIToolboxFilters/RegisterKnownFilters.cpp"
 
 #include "FilterParameterWidgets/RegisterKnownFilterParameterWidgets.cpp"
-
