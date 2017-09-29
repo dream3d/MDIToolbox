@@ -168,5 +168,5 @@ const QString MDIToolboxFilter::getSubGroupName()
 // -----------------------------------------------------------------------------
 const QString MDIToolboxFilter::getHumanLabel()
 {
-  return "MDIToolboxFilter";
+  return "MDI::ToolboxFilter";
 }
