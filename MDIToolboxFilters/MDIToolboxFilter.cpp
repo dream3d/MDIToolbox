@@ -9,9 +9,6 @@
 #include "MDIToolbox/MDIToolboxConstants.h"
 #include "MDIToolbox/MDIToolboxVersion.h"
 
-// Include the MOC generated file for this class
-#include "moc_MDIToolboxFilter.cpp"
-
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
@@ -25,9 +22,7 @@ MDIToolboxFilter::MDIToolboxFilter()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-MDIToolboxFilter::~MDIToolboxFilter()
-{
-}
+MDIToolboxFilter::~MDIToolboxFilter() = default;
 
 // -----------------------------------------------------------------------------
 //

@@ -137,7 +137,7 @@ private:
   QList<QString> m_Filters;
   bool m_DidLoad;
 
-  MDIToolboxPlugin(const MDIToolboxPlugin&); // Copy Constructor Not Implemented
+  MDIToolboxPlugin(const MDIToolboxPlugin&) = delete; // Copy Constructor Not Implemented
   void operator=(const MDIToolboxPlugin&);   // Operator '=' Not Implemented
 };
 

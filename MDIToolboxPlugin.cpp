@@ -12,9 +12,6 @@
 
 #include "MDIToolbox/MDIToolboxConstants.h"
 
-// Include the MOC generated file for this class
-#include "moc_MDIToolboxPlugin.cpp"
-
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
@@ -42,9 +39,7 @@ MDIToolboxPlugin::MDIToolboxPlugin()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-MDIToolboxPlugin::~MDIToolboxPlugin()
-{
-}
+MDIToolboxPlugin::~MDIToolboxPlugin() = default;
 
 // -----------------------------------------------------------------------------
 //

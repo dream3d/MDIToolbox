@@ -114,7 +114,7 @@ protected:
   void initialize();
 
 private:
-  MDIToolboxFilter(const MDIToolboxFilter&); // Copy Constructor Not Implemented
+  MDIToolboxFilter(const MDIToolboxFilter&) = delete; // Copy Constructor Not Implemented
   void operator=(const MDIToolboxFilter&);   // Operator '=' Not Implemented
 };
 
