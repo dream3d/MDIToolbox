@@ -12,8 +12,8 @@
 namespace MDIToolboxConstants
 {
 const QString MDIToolboxPluginFile("MDIToolboxPlugin");
-const QString MDIToolboxPluginDisplayName("MDIToolboxPlugin");
-const QString MDIToolboxBaseName("MDIToolboxPlugin");
+const QString MDIToolboxPluginDisplayName("MDI Toolbox");
+const QString MDIToolboxBaseName("MDIToolbox");
 
 namespace FilterGroups
 {
