@@ -44,10 +44,27 @@ MDIToolboxPlugin::~MDIToolboxPlugin() = default;
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-QString MDIToolboxPlugin::getPluginName()
+QString MDIToolboxPlugin::getPluginFileName()
 {
-  return (MDIToolboxConstants::MDIToolboxPluginDisplayName);
+  return MDIToolboxConstants::MDIToolboxPluginFile;
 }
+
+// -----------------------------------------------------------------------------
+//
+// -----------------------------------------------------------------------------
+QString MDIToolboxPlugin::getPluginDisplayName()
+{
+  return MDIToolboxConstants::MDIToolboxPluginDisplayName;
+}
+
+// -----------------------------------------------------------------------------
+//
+// -----------------------------------------------------------------------------
+QString MDIToolboxPlugin::getPluginBaseName()
+{
+  return MDIToolboxConstants::MDIToolboxBaseName;
+}
+
 
 // -----------------------------------------------------------------------------
 //
