@@ -105,7 +105,7 @@ void MDIToolboxFilter::execute()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-AbstractFilter::Pointer MDIToolboxFilter::newFilterInstance(bool copyFilterParameters)
+AbstractFilter::Pointer MDIToolboxFilter::newFilterInstance(bool copyFilterParameters) const
 {
   MDIToolboxFilter::Pointer filter = MDIToolboxFilter::New();
   if(true == copyFilterParameters)
@@ -118,7 +118,7 @@ AbstractFilter::Pointer MDIToolboxFilter::newFilterInstance(bool copyFilterParam
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getCompiledLibraryName()
+const QString MDIToolboxFilter::getCompiledLibraryName() const
 {
   return MDIToolboxConstants::MDIToolboxBaseName;
 }
@@ -126,7 +126,7 @@ const QString MDIToolboxFilter::getCompiledLibraryName()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getBrandingString()
+const QString MDIToolboxFilter::getBrandingString() const
 {
   return "MDIToolbox";
 }
@@ -134,7 +134,7 @@ const QString MDIToolboxFilter::getBrandingString()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getFilterVersion()
+const QString MDIToolboxFilter::getFilterVersion() const
 {
   QString version;
   QTextStream vStream(&version);
@@ -145,7 +145,7 @@ const QString MDIToolboxFilter::getFilterVersion()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getGroupName()
+const QString MDIToolboxFilter::getGroupName() const
 {
   return SIMPL::FilterGroups::Unsupported;
 }
@@ -161,7 +161,7 @@ const QUuid MDIToolboxFilter::getUuid()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getSubGroupName()
+const QString MDIToolboxFilter::getSubGroupName() const
 {
   return "MDIToolbox";
 }
@@ -169,7 +169,7 @@ const QString MDIToolboxFilter::getSubGroupName()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getHumanLabel()
+const QString MDIToolboxFilter::getHumanLabel() const
 {
   return "MDI::ToolboxFilter";
 }
