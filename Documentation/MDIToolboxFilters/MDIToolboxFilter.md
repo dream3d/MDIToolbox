@@ -1,4 +1,4 @@
-MDIToolboxFilter {#mditoolboxfilter}
+MDIToolboxFilter 
 =============
 
 ## Group (Subgroup) ##
