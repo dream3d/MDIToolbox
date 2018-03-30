@@ -13,7 +13,6 @@
 //
 // -----------------------------------------------------------------------------
 MDIToolboxFilter::MDIToolboxFilter()
-: AbstractFilter()
 {
   initialize();
   setupFilterParameters();
