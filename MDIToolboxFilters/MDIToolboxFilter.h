@@ -18,10 +18,10 @@ class MDIToolboxFilter : public AbstractFilter
 
 public:
   SIMPL_SHARED_POINTERS(MDIToolboxFilter)
-  SIMPL_STATIC_NEW_MACRO(MDIToolboxFilter)
-   SIMPL_TYPE_MACRO_SUPER_OVERRIDE(MDIToolboxFilter, AbstractFilter)
+  SIMPL_FILTER_NEW_MACRO(MDIToolboxFilter)
+  SIMPL_TYPE_MACRO_SUPER_OVERRIDE(MDIToolboxFilter, AbstractFilter)
 
-  virtual ~MDIToolboxFilter();
+  ~MDIToolboxFilter() override;
 
   /**
    * @brief getCompiledLibraryName Reimplemented from @see AbstractFilter class
@@ -120,7 +120,9 @@ protected:
   void initialize();
 
 private:
+public:
   MDIToolboxFilter(const MDIToolboxFilter&) = delete; // Copy Constructor Not Implemented
+  MDIToolboxFilter(MDIToolboxFilter&&) = delete;      // Move Constructor
   void operator=(const MDIToolboxFilter&);   // Operator '=' Not Implemented
 };
 
