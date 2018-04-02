@@ -123,7 +123,8 @@ private:
 public:
   MDIToolboxFilter(const MDIToolboxFilter&) = delete; // Copy Constructor Not Implemented
   MDIToolboxFilter(MDIToolboxFilter&&) = delete;      // Move Constructor
-  void operator=(const MDIToolboxFilter&);            // Move assignment Not Implemented
+  MDIToolboxFilter& operator=(const MDIToolboxFilter&) = delete; // Copy Assignment Not Implemented
+  MDIToolboxFilter& operator=(MDIToolboxFilter&&) = delete;      // Move Assignment Not Implemented
 };
 
 #endif /* _MDIToolboxFilter_H_ */
