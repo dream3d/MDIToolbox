@@ -156,7 +156,7 @@ private:
   bool m_DidLoad;
 
   MDIToolboxPlugin(const MDIToolboxPlugin&) = delete; // Copy Constructor Not Implemented
-  void operator=(const MDIToolboxPlugin&);   // Operator '=' Not Implemented
+  void operator=(const MDIToolboxPlugin&);            // Move assignment Not Implemented
 };
 
 #endif /* _MDIToolbox_H_ */
