@@ -104,5 +104,5 @@ public:
 
 private:
   MDIToolboxFilterTest(const MDIToolboxFilterTest&); // Copy Constructor Not Implemented
-  void operator=(const MDIToolboxFilterTest&);       // Operator '=' Not Implemented
+  void operator=(const MDIToolboxFilterTest&);       // Move assignment Not Implemented
 };
