@@ -228,6 +228,11 @@ void MDIToolboxPlugin::readSettings(QSettings& prefs)
 {
 }
 
-#include "MDIToolboxFilters/RegisterKnownFilters.cpp"
+// -----------------------------------------------------------------------------
+//
+// -----------------------------------------------------------------------------
+void MDIToolboxPlugin::registerFilterWidgets(FilterWidgetManager* fwm)
+{
+}
 
-#include "FilterParameterWidgets/RegisterKnownFilterParameterWidgets.cpp"
+#include "MDIToolboxFilters/RegisterKnownFilters.cpp"
