@@ -10,7 +10,13 @@ class MDIToolboxGuiPlugin : public MDIToolboxPlugin
 
 public:
   MDIToolboxGuiPlugin();
-  ~MDIToolboxGuiPlugin() override;
+   ~MDIToolboxGuiPlugin() override;
+  
+  /**
+   * @brief Register all the filters with the FilterWidgetFactory
+   */
+  void registerFilterWidgets(FilterWidgetManager* fwm) override;
+  
 
 public:
   MDIToolboxGuiPlugin(const MDIToolboxGuiPlugin&) = delete;            // Copy Constructor Not Implemented

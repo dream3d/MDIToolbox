@@ -10,10 +10,13 @@
 
 #include "SIMPLib/Plugin/ISIMPLibPlugin.h"
 
+#include "MDIToolbox/MDIToolboxDLLExport.h"
+
 /**
  * @brief The MDIToolboxPlugin class
  */
-class MDIToolboxPlugin : public QObject, public ISIMPLibPlugin
+class MDIToolbox_EXPORT MDIToolboxPlugin : public QObject, public ISIMPLibPlugin
+
 {
   Q_OBJECT
   Q_INTERFACES(ISIMPLibPlugin)
