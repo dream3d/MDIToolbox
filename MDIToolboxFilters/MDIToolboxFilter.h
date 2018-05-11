@@ -9,10 +9,12 @@
 #include "SIMPLib/Filtering/AbstractFilter.h"
 #include "SIMPLib/SIMPLib.h"
 
+#include "MDIToolbox/MDIToolboxDLLExport.h"
+
 /**
  * @brief The MDIToolboxFilter class. See [Filter documentation](@ref mditoolboxfilter) for details.
  */
-class MDIToolboxFilter : public AbstractFilter
+class MDIToolbox_EXPORT MDIToolboxFilter : public AbstractFilter
 {
   Q_OBJECT
 
