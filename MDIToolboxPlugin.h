@@ -2,8 +2,7 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _mditoolboxplugin_h_
-#define _mditoolboxplugin_h_
+#pragma once
 
 #include <QtCore/QObject>
 #include <QtCore/QSettings>
@@ -162,4 +161,3 @@ private:
   void operator=(const MDIToolboxPlugin&);            // Move assignment Not Implemented
 };
 
-#endif /* _MDIToolbox_H_ */

@@ -2,8 +2,7 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _mditoolboxfilter_h_
-#define _mditoolboxfilter_h_
+#pragma once
 
 #include "SIMPLib/Common/SIMPLibSetGetMacros.h"
 #include "SIMPLib/Filtering/AbstractFilter.h"
@@ -129,4 +128,3 @@ public:
   MDIToolboxFilter& operator=(MDIToolboxFilter&&) = delete;      // Move Assignment Not Implemented
 };
 
-#endif /* _MDIToolboxFilter_H_ */
