@@ -82,21 +82,6 @@ void MDIToolboxFilter::execute()
     return;
   }
 
-  if(getWarningCondition() < 0)
-  {
-    QString ss = QObject::tr("Some warning message");
-    setWarningCondition(-88888888);
-    notifyWarningMessage(getHumanLabel(), ss, getWarningCondition());
-  }
-
-  if(getErrorCondition() < 0)
-  {
-    QString ss = QObject::tr("Some error message");
-    setErrorCondition(-99999999);
-    notifyErrorMessage(getHumanLabel(), ss, getErrorCondition());
-    return;
-  }
-
   notifyStatusMessage(getHumanLabel(), "Complete");
 }
 
