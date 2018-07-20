@@ -16,19 +16,17 @@
 //
 // -----------------------------------------------------------------------------
 MDIToolboxPlugin::MDIToolboxPlugin()
-: m_Version("0.1.0")
-, // Initialize MDIToolbox's Version Number Here
-    m_CompatibilityVersion("0.1.0")
-, // Initialize MDIToolbox's Compatibility Version Number Here
-    m_Vendor("Vendor Name")
+: m_Version(MDIToolbox::Version::Package())
+, m_CompatibilityVersion(MDIToolbox::Version::Package())
+, m_Vendor("Open-Source")
 , // Initialize MDIToolbox's Vendor Name Here
-    m_URL("URL")
+    m_URL("http://www.github.com/bluequartzsoftware/MDIToolbox")
 , // Initialize Company URL Here
-    m_Location("Location")
+    m_Location("")
 , // Initialize MDIToolbox library Location Here
-    m_Description("Description")
+    m_Description("")
 , // Initialize MDIToolbox's Description Here
-    m_Copyright("Copyright")
+    m_Copyright("")
 , // Initialize MDIToolbox's Copyright Here
     m_Filters(QList<QString>())
 , // Initialize MDIToolbox's List of Dependencies Here
@@ -64,7 +62,6 @@ QString MDIToolboxPlugin::getPluginBaseName()
 {
   return MDIToolboxConstants::MDIToolboxBaseName;
 }
-
 
 // -----------------------------------------------------------------------------
 //
@@ -168,7 +165,7 @@ QMap<QString, QString> MDIToolboxPlugin::getThirdPartyLicenses()
   QMap<QString, QString> licenseMap;
   QList<QString> fileStrList;
   fileStrList.push_back(":/ThirdParty/HDF5.txt");
-  
+
   fileStrList.push_back(":/ThirdParty/Qt.txt");
   fileStrList.push_back(":/ThirdParty/Qwt.txt");
 
