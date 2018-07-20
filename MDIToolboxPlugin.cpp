@@ -11,6 +11,7 @@
 #include "SIMPLib/Filtering/FilterManager.h"
 
 #include "MDIToolbox/MDIToolboxConstants.h"
+#include "MDIToolbox/MDIToolboxVersion.h"
 
 // -----------------------------------------------------------------------------
 //
