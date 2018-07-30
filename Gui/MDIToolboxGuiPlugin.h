@@ -20,7 +20,7 @@ public:
 
 public:
   MDIToolboxGuiPlugin(const MDIToolboxGuiPlugin&) = delete;            // Copy Constructor Not Implemented
-  MDIToolboxGuiPlugin(MDIToolboxGuiPlugin&&) = delete;                 // Move Constructor
+  MDIToolboxGuiPlugin(MDIToolboxGuiPlugin&&) = delete;                 // Move Constructor Not Implemented
   MDIToolboxGuiPlugin& operator=(const MDIToolboxGuiPlugin&) = delete; // Copy Assignment Not Implemented
   MDIToolboxGuiPlugin& operator=(MDIToolboxGuiPlugin&&) = delete;      // Move Assignment Not Implemented
 };
