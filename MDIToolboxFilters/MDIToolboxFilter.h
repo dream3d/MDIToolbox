@@ -120,7 +120,6 @@ protected:
   */
   void initialize();
 
-private:
 public:
   MDIToolboxFilter(const MDIToolboxFilter&) = delete; // Copy Constructor Not Implemented
   MDIToolboxFilter(MDIToolboxFilter&&) = delete;      // Move Constructor Not Implemented
