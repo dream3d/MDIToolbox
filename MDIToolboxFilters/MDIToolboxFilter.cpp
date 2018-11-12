@@ -91,7 +91,7 @@ void MDIToolboxFilter::execute()
 AbstractFilter::Pointer MDIToolboxFilter::newFilterInstance(bool copyFilterParameters) const
 {
   MDIToolboxFilter::Pointer filter = MDIToolboxFilter::New();
-  if(true == copyFilterParameters)
+  if(copyFilterParameters)
   {
     copyFilterParameterInstanceVariables(filter.get());
   }
