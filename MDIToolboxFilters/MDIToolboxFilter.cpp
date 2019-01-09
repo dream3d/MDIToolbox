@@ -82,7 +82,6 @@ void MDIToolboxFilter::execute()
     return;
   }
 
-  notifyStatusMessage(getHumanLabel(), "Complete");
 }
 
 // -----------------------------------------------------------------------------
