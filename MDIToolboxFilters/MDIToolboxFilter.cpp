@@ -37,7 +37,7 @@ void MDIToolboxFilter::initialize()
 // -----------------------------------------------------------------------------
 void MDIToolboxFilter::setupFilterParameters()
 {
-  FilterParameterVector parameters;
+  FilterParameterVectorType parameters;
 
   setFilterParameters(parameters);
 }
