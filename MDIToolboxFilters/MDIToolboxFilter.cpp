@@ -27,8 +27,8 @@ MDIToolboxFilter::~MDIToolboxFilter() = default;
 // -----------------------------------------------------------------------------
 void MDIToolboxFilter::initialize()
 {
-  clearErrorCondition();
-  clearWarningCondition();
+  clearErrorCode();
+  clearWarningCode();
   setCancel(false);
 }
 
@@ -47,8 +47,8 @@ void MDIToolboxFilter::setupFilterParameters()
 // -----------------------------------------------------------------------------
 void MDIToolboxFilter::dataCheck()
 {
-  clearErrorCondition();
-  clearWarningCondition();
+  clearErrorCode();
+  clearWarningCode();
 }
 
 // -----------------------------------------------------------------------------
