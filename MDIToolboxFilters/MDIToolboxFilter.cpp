@@ -2,7 +2,11 @@
  * Your License or Copyright can go here
  */
 
+#include <memory>
+
 #include "MDIToolboxFilter.h"
+
+#include <QtCore/QTextStream>
 
 #include "SIMPLib/Common/Constants.h"
 
@@ -100,7 +104,7 @@ AbstractFilter::Pointer MDIToolboxFilter::newFilterInstance(bool copyFilterParam
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getCompiledLibraryName() const
+QString MDIToolboxFilter::getCompiledLibraryName() const
 {
   return MDIToolboxConstants::MDIToolboxBaseName;
 }
@@ -108,7 +112,7 @@ const QString MDIToolboxFilter::getCompiledLibraryName() const
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getBrandingString() const
+QString MDIToolboxFilter::getBrandingString() const
 {
   return "MDIToolbox";
 }
@@ -116,7 +120,7 @@ const QString MDIToolboxFilter::getBrandingString() const
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getFilterVersion() const
+QString MDIToolboxFilter::getFilterVersion() const
 {
   QString version;
   QTextStream vStream(&version);
@@ -127,7 +131,7 @@ const QString MDIToolboxFilter::getFilterVersion() const
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getGroupName() const
+QString MDIToolboxFilter::getGroupName() const
 {
   return SIMPL::FilterGroups::Unsupported;
 }
@@ -135,7 +139,7 @@ const QString MDIToolboxFilter::getGroupName() const
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QUuid MDIToolboxFilter::getUuid()
+QUuid MDIToolboxFilter::getUuid() const
 {
   return QUuid("{b1542279-caec-552e-a82b-bafefc58550f}");
 }
@@ -143,7 +147,7 @@ const QUuid MDIToolboxFilter::getUuid()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getSubGroupName() const
+QString MDIToolboxFilter::getSubGroupName() const
 {
   return "MDIToolbox";
 }
@@ -151,7 +155,36 @@ const QString MDIToolboxFilter::getSubGroupName() const
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-const QString MDIToolboxFilter::getHumanLabel() const
+QString MDIToolboxFilter::getHumanLabel() const
 {
   return "MDI::ToolboxFilter";
+}
+
+// -----------------------------------------------------------------------------
+MDIToolboxFilter::Pointer MDIToolboxFilter::NullPointer()
+{
+  return Pointer(static_cast<Self*>(nullptr));
+}
+
+// -----------------------------------------------------------------------------
+std::shared_ptr<MDIToolboxFilter> MDIToolboxFilter::New()
+{
+  struct make_shared_enabler : public MDIToolboxFilter
+  {
+  };
+  std::shared_ptr<make_shared_enabler> val = std::make_shared<make_shared_enabler>();
+  val->setupFilterParameters();
+  return val;
+}
+
+// -----------------------------------------------------------------------------
+QString MDIToolboxFilter::getNameOfClass() const
+{
+  return QString("MDIToolboxFilter");
+}
+
+// -----------------------------------------------------------------------------
+QString MDIToolboxFilter::ClassName()
+{
+  return QString("MDIToolboxFilter");
 }
